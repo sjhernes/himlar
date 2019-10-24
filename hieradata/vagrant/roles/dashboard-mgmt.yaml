@@ -5,3 +5,4 @@ profile::application::openssl::certs:
     altnames:
       - "dashboard.%{hiera('domain_mgmt')}"
 
+openstack_version: 'stein'
