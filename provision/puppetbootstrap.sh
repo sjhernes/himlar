@@ -19,9 +19,9 @@ baseurl=$repo/epel
 EOM
   cat > /etc/yum.repos.d/puppetlabs.repo <<- EOM
 [puppetlabs]
-name=Puppet 4 Yum Repo
-baseurl=$repo/puppetlabs-PC1/
-gpgkey=$repo/puppetlabs-PC1/RPM-GPG-KEY-puppet
+name=Puppet 5 Yum Repo
+baseurl=$repo/puppetlabs5/
+gpgkey=$repo/puppetlabs5/RPM-GPG-KEY-puppet
 enabled=1
 gpgcheck=1
 EOM
@@ -69,6 +69,7 @@ bootstrap_puppet()
     # Fix annoying debian thing
     sed -i 's/^mesg n$/tty -s \&\& mesg n/g' /root/.profile
     # New debian version
+    # NB! Puppet 4!!!
     if $(/bin/cat /etc/os-release | grep stretch > /dev/null 2>&1); then
       wget -O /tmp/puppetlabs-release-pc1-stretch.deb http://apt.puppetlabs.com/puppetlabs-release-pc1-stretch.deb
       dpkg -i /tmp/puppetlabs-release-pc1-stretch.deb

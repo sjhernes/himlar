@@ -59,4 +59,4 @@ neutron::config::server_config:
 # quota (node: network)
 neutron::quota::quota_port:   '-1'
 
-openstack_version: 'rocky' #FIXME
+openstack_version: 'stein' #FIXME

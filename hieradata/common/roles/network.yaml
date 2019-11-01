@@ -72,4 +72,4 @@ profile::base::yumrepo::repo_hash:
     ensure: present
   epel: # should be absent when using RDO, but whitelist can also work
     ensure:   present
-    includepkgs: 'htop bash-completion-extras'
+    includepkgs: 'htop bash-completion-extras python2-bcrypt'
